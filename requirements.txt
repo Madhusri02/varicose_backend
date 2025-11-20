@@ -4,3 +4,4 @@ keras
 numpy
 Pillow
 gunicorn
+flask-cors
