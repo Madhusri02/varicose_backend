@@ -1,11 +1,13 @@
 from flask import Flask, request, jsonify
 from tensorflow import keras
+from flask_cors import CORS 
 import numpy as np
 from PIL import Image
 import tensorflow as tf
 import os
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}}) 
 
 MODEL_PATH = "varicose_vgg19_model.h5"
 model = keras.models.load_model(MODEL_PATH)
